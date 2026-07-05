@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pt
+*.pth
+venv/
+.venv/
+data_stratified/
+test.v1i.coco/
+.vscode/
+.idea/
