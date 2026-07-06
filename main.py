@@ -62,7 +62,7 @@ optimizer = optim.Adam(model.parameters(), lr=0.001, weight_decay=1e-5) # Added 
 scheduler = lr_scheduler.StepLR(optimizer, step_size=7, gamma=0.1) # Learning rate scheduler
 
 # Training loop
-num_epochs = 5
+num_epochs = 20
 best_val_accuracy = 0.0
 model_save_path = 'best_traffic_sign_classifier.pth'
 

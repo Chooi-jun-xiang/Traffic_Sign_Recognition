@@ -69,6 +69,11 @@ python gui_app.py
 
 ## Results
 
-<!-- TODO: fill in after re-running training -->
-- Test accuracy: __%
-- F1 score: __
+Trained for 20 epochs on an RTX 4060 (best model at epoch 17):
+
+- Validation accuracy: **80.89%**
+- Test accuracy: **72.98%** (285 test samples)
+- Top-3 accuracy: **82.11%**
+- F1 score (weighted): **0.6971**
+
+Run `eval_results.py` to reproduce the test metrics from the saved model.

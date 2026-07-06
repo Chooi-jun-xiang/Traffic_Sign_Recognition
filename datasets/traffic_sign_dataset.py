@@ -89,7 +89,10 @@ class TrafficSignDataset(Dataset):
 
     def __getitem__(self, idx):
         file_name, label = self.samples[idx]
-        image = Image.open(os.path.join(self.image_dir, file_name)).convert("RGB")
+        path = os.path.join(self.image_dir, file_name)
+        if not os.path.exists(path):
+            path = os.path.join(self.image_dir, os.path.basename(file_name.replace("\\", "/")))
+        image = Image.open(path).convert("RGB")
 
         if self.transform is not None:
             image = self.transform(image)
